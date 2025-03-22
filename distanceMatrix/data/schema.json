@@ -1,0 +1,233 @@
+{
+    "$schema": "https://json-schema.org/draft/2019-09/schema",
+    "$id": "http://example.com/example.json",
+    "type": "object",
+    "default": {},
+    "title": "Root Schema",
+    "required": [
+        "destination_addresses",
+        "origin_addresses",
+        "rows",
+        "status"
+    ],
+    "properties": {
+        "destination_addresses": {
+            "type": "array",
+            "default": [],
+            "title": "The destination_addresses Schema",
+            "items": {
+                "type": "string",
+                "default": "",
+                "title": "A Schema",
+                "examples": [
+                    "Curitiba, State of Paraná, Brazil"
+                ]
+            },
+            "examples": [
+                [
+                    "Curitiba, State of Paraná, Brazil"]
+            ]
+        },
+        "origin_addresses": {
+            "type": "array",
+            "default": [],
+            "title": "The origin_addresses Schema",
+            "items": {
+                "type": "string",
+                "default": "",
+                "title": "A Schema",
+                "examples": [
+                    "Belo Horizonte, State of Minas Gerais, Brazil"
+                ]
+            },
+            "examples": [
+                [
+                    "Belo Horizonte, State of Minas Gerais, Brazil"]
+            ]
+        },
+        "rows": {
+            "type": "array",
+            "default": [],
+            "title": "The rows Schema",
+            "items": {
+                "type": "object",
+                "default": {},
+                "title": "A Schema",
+                "required": [
+                    "elements"
+                ],
+                "properties": {
+                    "elements": {
+                        "type": "array",
+                        "default": [],
+                        "title": "The elements Schema",
+                        "items": {
+                            "type": "object",
+                            "default": {},
+                            "title": "A Schema",
+                            "required": [
+                                "distance",
+                                "duration",
+                                "status"
+                            ],
+                            "properties": {
+                                "distance": {
+                                    "type": "object",
+                                    "default": {},
+                                    "title": "The distance Schema",
+                                    "required": [
+                                        "text",
+                                        "value"
+                                    ],
+                                    "properties": {
+                                        "text": {
+                                            "type": "string",
+                                            "default": "",
+                                            "title": "The text Schema",
+                                            "examples": [
+                                                "977 km"
+                                            ]
+                                        },
+                                        "value": {
+                                            "type": "integer",
+                                            "default": 0,
+                                            "title": "The value Schema",
+                                            "examples": [
+                                                977190
+                                            ]
+                                        }
+                                    },
+                                    "examples": [{
+                                        "text": "977 km",
+                                        "value": 977190
+                                    }]
+                                },
+                                "duration": {
+                                    "type": "object",
+                                    "default": {},
+                                    "title": "The duration Schema",
+                                    "required": [
+                                        "text",
+                                        "value"
+                                    ],
+                                    "properties": {
+                                        "text": {
+                                            "type": "string",
+                                            "default": "",
+                                            "title": "The text Schema",
+                                            "examples": [
+                                                "12 hours 51 mins"
+                                            ]
+                                        },
+                                        "value": {
+                                            "type": "integer",
+                                            "default": 0,
+                                            "title": "The value Schema",
+                                            "examples": [
+                                                46250
+                                            ]
+                                        }
+                                    },
+                                    "examples": [{
+                                        "text": "12 hours 51 mins",
+                                        "value": 46250
+                                    }]
+                                },
+                                "status": {
+                                    "type": "string",
+                                    "default": "",
+                                    "title": "The status Schema",
+                                    "examples": [
+                                        "OK"
+                                    ]
+                                }
+                            },
+                            "examples": [{
+                                "distance": {
+                                    "text": "977 km",
+                                    "value": 977190
+                                },
+                                "duration": {
+                                    "text": "12 hours 51 mins",
+                                    "value": 46250
+                                },
+                                "status": "OK"
+                            }]
+                        },
+                        "examples": [
+                            [{
+                                "distance": {
+                                    "text": "977 km",
+                                    "value": 977190
+                                },
+                                "duration": {
+                                    "text": "12 hours 51 mins",
+                                    "value": 46250
+                                },
+                                "status": "OK"
+                            }]
+                        ]
+                    }
+                },
+                "examples": [{
+                    "elements": [{
+                        "distance": {
+                            "text": "977 km",
+                            "value": 977190
+                        },
+                        "duration": {
+                            "text": "12 hours 51 mins",
+                            "value": 46250
+                        },
+                        "status": "OK"
+                    }]
+                }]
+            },
+            "examples": [
+                [{
+                    "elements": [{
+                        "distance": {
+                            "text": "977 km",
+                            "value": 977190
+                        },
+                        "duration": {
+                            "text": "12 hours 51 mins",
+                            "value": 46250
+                        },
+                        "status": "OK"
+                    }]
+                }]
+            ]
+        },
+        "status": {
+            "type": "string",
+            "default": "",
+            "title": "The status Schema",
+            "examples": [
+                "OK"
+            ]
+        }
+    },
+    "examples": [{
+        "destination_addresses": [
+            "Curitiba, State of Paraná, Brazil"
+        ],
+        "origin_addresses": [
+            "Belo Horizonte, State of Minas Gerais, Brazil"
+        ],
+        "rows": [{
+            "elements": [{
+                "distance": {
+                    "text": "977 km",
+                    "value": 977190
+                },
+                "duration": {
+                    "text": "12 hours 51 mins",
+                    "value": 46250
+                },
+                "status": "OK"
+            }]
+        }],
+        "status": "OK"
+    }]
+}
